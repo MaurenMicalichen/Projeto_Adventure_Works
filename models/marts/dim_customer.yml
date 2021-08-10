@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Esta é a tabela de dimensão clientes da Adventure Works"
+    columns:
+      - name: sk_cliente
+        tests:
+          - unique
+          - not_null

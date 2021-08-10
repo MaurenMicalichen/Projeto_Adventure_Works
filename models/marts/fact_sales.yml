@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Esta é a tabela de fatos vendas da Adventure Works"
+    columns:
+      - name: fk_cliente
+        tests:
+          - relationships:
+              to: ref('dim_customer')
+              field: sk_cliente
+
+      - name: fk_produto
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: sk_produto
+            
+

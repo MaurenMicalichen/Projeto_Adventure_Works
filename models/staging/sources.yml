@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: adventure_works_elt
+    description: Essa é a fonte de dados, criada através do Stitch
+    tables:
+      - name: product
+        description: Esta tabela contém informações sobre produtos.
+      - name: person
+        description: Esta tabela contém informações sobre pessoas.
+      - name: customer
+        description: Esta tabela contém informações sobre clientes.
+      - name: countryregion
+        description: Esta tabela contém informações sobre pais.
+      - name: stateprovince
+        description: Esta tabela contém informações sobre estados.
+      - name: address
+        description: Esta tabela contém informações sobre cidades.
+      - name: creditcard
+        description: Esta tabela contém informações sobre cartão de credito.
+      - name: salesorderheader
+        description: Esta tabela contém informações sobre venda.
+        columns:
+          - name: salesorderid
+            description: Chave primária da tabela de vendas.
+            tests:
+              - unique
+              - not_null
+      - name: salesorderdetail
+        description: Esta tabela contém informações sobre detalhes da venda.
+      - name: salesperson
+        description: Esta tabela contém informações sobre vendedores.
+      - name: salesorderheadersalesreason
+        description: Esta tabela contém informações sobre motivo de venda.
+      - name: salesreason
+        description: Esta tabela contém informações que complementam o motivo de venda.
+      - name: store
+        description: Esta tabela contém informações sobre as lojas (clientes).
+

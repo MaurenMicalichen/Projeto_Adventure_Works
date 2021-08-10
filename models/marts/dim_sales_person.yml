@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_sales_person
+    description: "Esta é a tabela de dimensão vendedores da Adventure Works"
+    columns:
+      - name: sk_entidade_comercial
+        tests:
+          - unique
+          - not_null

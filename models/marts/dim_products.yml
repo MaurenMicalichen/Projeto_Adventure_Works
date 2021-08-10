@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: "Esta é a tabela de dimensão produtos da Adventure Works"
+    columns:
+      - name: sk_produto
+        tests:
+          - unique
+          - not_null
